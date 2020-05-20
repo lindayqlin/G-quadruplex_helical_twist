@@ -1,5 +1,5 @@
 """
-Calculates the helical twist in THM.
+Calculates the helical twist in a G-quadruplex.
 Linda Lin
 5/19/20
 """
@@ -13,11 +13,11 @@ def main():
     #key = atom #
     #value = [C8, C2, N1] where each atom is a list: [name, x, y, z]
     nucleotide_coordinates = {}
-    for i in range(1,19):                           #TODO change 19 to number of nucleotides in your structure + 1
+    for i in range(1,19):                           #TODO change 19 to num nt + 1
         nucleotide_coordinates[i] = []
 
     #parse pdb file
-    filename = "T1_A.pdb"                           #TODO change T1_A.pdb to your file name + .pdb
+    filename = "T1_A.pdb"                           #TODO change T1_A.pdb to your filename
     print()
     pdb = open(filename, "r")
     for line in pdb:
@@ -33,7 +33,7 @@ def main():
         pdb.readline()                              #TODO remove if no ANISOU lines in pdb file
     pdb.close()
 
-                                                    #TODO quartet Gs in order (G1 stacks on G2 stacks on G3 in this example); num quartets
+                                                    #TODO quartet Gs in order (G1 stacks on G2 stacks on G3 here)
     quartet1 = [1,6,11,16]
     quartet2 = [2,7,12,17]
     quartet3 = [3,8,13,18]
@@ -50,7 +50,7 @@ def main():
         vector = [midpt[0]-C8[0], midpt[1]-C8[1], midpt[2]-C8[2]]
         nucleotide_vectors[G] = vector
 
-    for i in range(0,2): #access pairs of stacked quartets  #TODO change 2 to number of quartets in your structure
+    for i in range(0,2): #access pairs of stacked quartets  #TODO change 2 to num quartets
         print("Quartets " + str(i+1) + "+" + str(i+2))
         topQuartet = quartets[i] #top quartet
         bottomQuartet = quartets[i+1] #bottom quartet
@@ -67,7 +67,8 @@ def main():
 
 
 def angle(v1, v2):
-    """Calculates angle between 2 vectors in degrees
+    """
+    Calculates angle between 2 vectors in degrees
     """
     mag1 = np.linalg.norm(v1)
     mag2 = np.linalg.norm(v2)
