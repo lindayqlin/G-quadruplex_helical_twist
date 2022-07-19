@@ -2,7 +2,7 @@
 
 Contacts:
 - Linda Lin (linda.yq.lin@yale.edu)
-- Liliya Yatsunyk (lyatsun1@swarthmore.edu)
+- Dr. Liliya Yatsunyk (lyatsun1@swarthmore.edu)
 
 
 As referenced and described in:
