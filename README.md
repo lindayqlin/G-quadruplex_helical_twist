@@ -1,4 +1,4 @@
-# Script for calculating helical twist in G-quadruplexes
+# Calculating helical twist in G-quadruplexes
 
 Contacts:
 - Linda Lin (linda.yq.lin@yale.edu)
