@@ -1,5 +1,7 @@
 # Calculating helical twist in G-quadruplexes
 
+Custom script for calculating helical twist in a G-quadruplex given a PDB file. (Note: please see comments in script for possible modifications needed to customize the script to analyze your G-quadruplex.)
+
 Contacts:
 - Linda Lin (linda.yq.lin@yale.edu)
 - Dr. Liliya Yatsunyk (lyatsun1@swarthmore.edu)
